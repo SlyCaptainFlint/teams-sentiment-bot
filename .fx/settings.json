@@ -1,0 +1,22 @@
+{
+    "appName": "AttitudeBot",
+    "projectId": "5e256ab6-d759-4380-a32a-902a4312e6eb",
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "Azure",
+        "azureResources": [],
+        "capabilities": [
+            "Bot"
+        ],
+        "activeResourcePlugins": [
+            "fx-resource-bot",
+            "fx-resource-aad-app-for-teams",
+            "fx-resource-local-debug",
+            "fx-resource-appstudio"
+        ]
+    },
+    "version": "1.0.0",
+    "activeEnvironment": "default",
+    "programmingLanguage": "typescript"
+}

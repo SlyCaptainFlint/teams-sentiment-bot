@@ -1,0 +1,156 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Large",
+            "weight": "Bolder",
+            "text": "Your results are ready"
+        },
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Default",
+            "text": "The overall tone is ${overallSentiment}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Positive",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "fontType": "Default",
+                            "size": "Medium",
+                            "weight": "Lighter"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder",
+                            "size": "Large",
+                            "color": "Good",
+                            "text": "${confidence.positive}%"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Neutral",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "size": "Medium",
+                            "weight": "Lighter"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder",
+                            "size": "Large",
+                            "color": "Default",
+                            "text": "${confidence.neutral}%"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Negative",
+                            "wrap": true,
+                            "size": "Medium",
+                            "weight": "Lighter",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder",
+                            "size": "Large",
+                            "color": "Warning",
+                            "text": "${confidence.negative}%"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "spacing": "medium",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "$data": "${sentenceAnalysisResults}",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 70,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${sentence}",                                    
+                                    "color": "${if(sentiment == 'positive', 'good', if(sentiment == 'neutral', 'default', 'attention'))}",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 10,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${confidence.positive}%",
+                                    "color": "good",
+                                    "horizontalAlignment": "Center",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 10,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${confidence.neutral}%",
+                                    "horizontalAlignment": "Center",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${confidence.negative}%",
+                                    "color": "attention",
+                                    "horizontalAlignment": "Center",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
