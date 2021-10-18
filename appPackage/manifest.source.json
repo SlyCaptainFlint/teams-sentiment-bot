@@ -5,7 +5,7 @@
     "id": "{appid}",
     "packageName": "com.microsoft.teams.extension",
     "developer": {
-        "name": "Teams App, Inc.",
+        "name": "Olga Zinoveva",
         "websiteUrl": "{baseUrl}",
         "privacyUrl": "{baseUrl}/index.html#/privacy",
         "termsOfUseUrl": "{baseUrl}/index.html#/termsofuse"
@@ -15,12 +15,12 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "AttitudeBot",
+        "short": "Sentimentalist",
         "full": "This field is not used"
     },
     "description": {
-        "short": "Short description of AttitudeBot.",
-        "full": "Full description of AttitudeBot."
+        "short": "Get a detailed sentiment analysis of any message.",
+        "full": "Have you ever wanted someone else to proof your message for tone before you hit 'send', or check if something you received actually sounds the way you think it does? The Sentimentalist is here to offer a second opinion! Take advantage of the power of Azure Cognitive Services to create a sentence-by-sentence analysis of a block of text, including confidence scores."
     },
     "accentColor": "#FFFFFF",
     "bots": [
@@ -37,10 +37,7 @@
     "composeExtensions": [],
     "configurableTabs": [],
     "staticTabs": [],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
+    "permissions": [],
     "validDomains": [],
     "webApplicationInfo": {
         "id": "{appClientId}",

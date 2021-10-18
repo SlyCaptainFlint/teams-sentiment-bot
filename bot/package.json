@@ -1,19 +1,18 @@
 {
-  "name": "echobot",
+  "name": "sentimentalist-teams-bot",
   "version": "1.0.0",
-  "description": "Microsoft Teams Toolkit hello world Bot sample",
-  "author": "Microsoft",
+  "description": "Teams bot that performs sentiment analysis",
+  "author": "Olga Zinoveva",
   "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
     "build": "tsc --build && shx cp -r ./adaptiveCards ./lib/",
     "start": "node ./lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon --watch ./src -e ts --exec \"npm run start\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com"
+    "url": "https://github.com/SlyCaptainFlint/teams-sentiment-bot"
   },
   "dependencies": {
     "@azure/ai-text-analytics": "^5.1.0",

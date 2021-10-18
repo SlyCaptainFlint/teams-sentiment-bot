@@ -1,11 +1,8 @@
 {
-    "name": "attitudebot",
+    "name": "sentimentalist-teams-bot-with-scaffolding",
     "version": "0.0.1",
-    "description": "",
-    "author": "",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+    "description": "This project includes the teams bot that performs sentiment analysis, and the scaffolding that helps with running and deploying it.",
+    "author": "Olga Zinoveva",
     "devDependencies": {
         "@microsoft/teamsfx-cli": "0.*"
     },
